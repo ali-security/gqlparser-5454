@@ -35,7 +35,7 @@ jobs:
       - name: Install Go (${{ steps.go_version.outputs.go_version }})
         uses: actions/setup-go@v3
         with:
-          go-version: ${{ steps.go_version.outputs.go_version }}
+          go-version: '1.16'
 
       - name: Unit Test Golang
         run: go test ./...
