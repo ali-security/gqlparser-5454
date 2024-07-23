@@ -40,3 +40,11 @@ jobs:
       - name: Unit Test Golang
         run: go test ./...
         timeout-minutes: 30
+
+      - name: Test Race
+        run: go test -race ./...
+        timeout-minutes: 30
+
+      - name: Flakey Test Ordering
+        run: go test -count 25 ./...
+        timeout-minutes: 30
